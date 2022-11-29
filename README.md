@@ -8,3 +8,4 @@ All steps to run this project on your PC
 ==> Your app is working. 
 6. You need to open file Login.html in Chrome 
 Note: you need to disable web-security in Chrome. Learn how to disable web-security at: "https://thatladydev.medium.com/how-to-disable-web-security-in-a-chrome-browser-265fa95f6a97"
+7. Login with username: admin, password: 1234567890 
