@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product page</title>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link href="../CSS/product.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap-icons-1.5.0/bootstrap-icons.css" rel="stylesheet">
+    <script src="../JS/service.js"></script>
+    <script src="../JS/product.js"></script>
+    <!-- <script src="../JS/test.js"></script> -->
+    
+</head>
+
+<body>
+    <div id = "loading">
+        <img id = "loading-image" src = "../img/Spinner.gif" alt = "loading..."/>
+    </div>
+    <header>
+        <nav>
+            <li>
+                <a href = "#">Sản phẩm</a>
+            </li>
+            <li>
+                <a href = "#">Khách hàng</a>
+            </li>
+            <li>
+                <a href = "#">Hỗ trợ</a>
+            </li>
+        </nav>
+    </header>
+    <div class = "divBodyContainer">
+        <div class="row">
+            <div class="col-md-7">
+                <fieldset class="border p-2">
+                    <legend class="scheduler-border">Danh sách sản phẩm</legend>
+                    <table class="table table-sm table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Mã sản phẩm</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Giá($)</th>
+                                <th scope="col">Đơn vị tính</th>
+                                <th scope="col">Loại sản phẩm</th>
+                                <th scope="col">
+                                    <div class="text-center">Chức năng</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <th scope="row">1</th>
+                                <th>AK001</th>
+                                <th>Áo khoác</th>
+                                <th>150</th>
+                                <th>Chiếc</th>
+                                <th>Quần áo</th>
+                                <th>
+                                    <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                                    <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </div>
+            <div class="col-md-5">
+                <fieldset class="border p-2">
+                    <legend class="scheduler-border">Thông tin sản phẩm</legend>
+                    <form id="productForm">
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label id="lblTenSanPham">Tên sản phẩm:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="productName"
+                                    placeholder="Nhập tên sản phẩm ...">
+                                <input type="hidden" id="productId">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Mã sản phẩm:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="productCode"
+                                    placeholder="Nhập mã sản phẩm ...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Loại sản phẩm:</label>
+                            </div>
+                            <div class="form-check col-md-8">
+                                <div class="col-md-6">
+                                    <input class="form-check-input" type="checkbox" value="Đồ gia dụng" name="productType"
+                                        id="productType">
+                                    <label class="form-check-label" for="productType">Đồ gia dụng</label><br>
+                                    <input class="form-check-input" type="checkbox" value="Đồ điện tử" name="productType"
+                                        id="productType">
+                                    <label class="form-check-label" for="productType">Đồ điện tử</label><br>
+                                    <input class="form-check-input" type="checkbox" value="Quần áo" name="productType"
+                                        id="productType">
+                                    <label class="form-check-label" for="productType">Quần áo</label><br>
+                                    <input class="form-check-input" type="checkbox" value="Sách" name="productType"
+                                        id="productType">
+                                    <label class="form-check-label" for="productType">Sách</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Đơn vị tính:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="productUnit">
+                                    <option value="">-- Chọn đơn vị tính --</option>
+                                    <option value="Cái">Cái</option>
+                                    <option value="Chiếc">Chiếc</option>
+                                    <option value="Bao">Bao</option>
+                                    <option value="Túi">Túi</option>
+                                    <option value="Thùng">Thùng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Giá sản phẩm:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="number" class="form-control" id="productPrice"
+                                    placeholder="Nhập giá sản phẩm ...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Ngày nhập:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="date" class="form-control" id="productImportDate">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Mô tả:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="productDescription"
+                                    placeholder="Mô tả sản phẩm ..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-sm-4 col-sm-7 pull-right">
+                                <button type="button" onclick="SaveProduct()" class="btn btn-primary">Lưu</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>© 2022 Copyright</div>
+    </footer>
+</body>
+
+</html>

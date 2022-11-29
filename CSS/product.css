@@ -1,0 +1,108 @@
+
+legend.scheduler-border {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+/* html{
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color : hsl(0, 14%, 61%);
+} */
+header,footer{
+    background-color: rgb(184,81,193);
+    border-radius: 5px;
+    height: 60px;
+    color: white;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-top: 8px;
+}
+nav{
+    text-align: center;
+}
+nav li a{
+    font-size: 26px;
+    text-decoration: none;
+    
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+footer{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 15px;
+}
+fieldset{
+    margin-top: 1rem;
+    border-width: 5px;
+    border-radius: 10px;
+    border-top: 1px solid rgb(170, 155, 155);
+}
+legend{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+thead th{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(184,81,193);
+    color: white;
+    border-width: 2px;
+    border-radius: 5px;
+}
+th{
+    text-align: center;
+}
+table{
+    width: 99%;
+
+}
+label{
+    font-size: 18px;
+}
+tbody{
+    font-size: 18px;
+    text-align: center;
+}
+
+#loading{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color : #fff;
+    z-index: 99;
+    text-align: center;
+}
+#loading-image{
+    position: absolute;
+    width: 100px;
+    top: 40%;
+    left: 45%;
+    z-index: 100;
+}
+
+
+
+
