@@ -85,7 +85,7 @@ function editProduct(id){
         $("productUnit").val(product.unit);
         var productTypeChecked = $("[name = 'productType']");
         for (const checkbox of productTypeChecked) {
-            if (product.type.includes(parseInt(checkbox.value))){
+            if (product.type.includes(checkbox.value)){
                 checkbox.checked = true;
             }
             else checkbox.checked = false;
