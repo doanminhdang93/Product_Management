@@ -63,7 +63,6 @@ function RenderProductList(){
                     <th>${product.unit}</th>
                     <th>${product.type}</th>
                     <th>
-                        <button class="btn btn-primary" onClick = SearchProduct()><i class="bi bi-search"></i></button>
                         <button class="btn btn-primary" onClick = editProduct(${product.id})><i class="bi bi-pencil-square"></i></button>
                         <button class="btn btn-danger" onClick = DeleteById(${product.id})><i class="bi bi-trash"></i></button>
                     </th>
